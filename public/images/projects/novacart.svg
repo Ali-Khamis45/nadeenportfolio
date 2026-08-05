@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgN" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e222a"/>
+      <stop offset="100%" stop-color="#252932"/>
+    </linearGradient>
+    <linearGradient id="accN" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00c8d7"/>
+      <stop offset="100%" stop-color="#6ee7f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgN)"/>
+  <rect x="110" y="110" width="220" height="280" rx="16" fill="#252932" stroke="#00c8d7" stroke-opacity="0.3"/>
+  <rect x="140" y="140" width="160" height="120" rx="8" fill="#1e222a"/>
+  <circle cx="220" cy="200" r="34" fill="none" stroke="#6ee7f9" stroke-opacity="0.6" stroke-width="2"/>
+  <path d="M195 200 l16 16 l34 -34" stroke="#00c8d7" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="140" y="280" width="160" height="12" rx="6" fill="#f5f5f5" opacity="0.3"/>
+  <rect x="140" y="302" width="110" height="12" rx="6" fill="#f5f5f5" opacity="0.2"/>
+  <rect x="140" y="340" width="160" height="34" rx="17" fill="url(#accN)" opacity="0.85"/>
+
+  <rect x="370" y="110" width="320" height="130" rx="16" fill="#252932" stroke="#00c8d7" stroke-opacity="0.25"/>
+  <circle cx="410" cy="150" r="14" fill="none" stroke="#00c8d7" stroke-opacity="0.6" stroke-width="2"/>
+  <path d="M403 150 h14 M410 143 v14" stroke="#6ee7f9" stroke-width="2"/>
+  <rect x="440" y="140" width="220" height="10" rx="5" fill="#f5f5f5" opacity="0.3"/>
+  <rect x="440" y="160" width="160" height="10" rx="5" fill="#f5f5f5" opacity="0.18"/>
+  <rect x="400" y="200" width="80" height="26" rx="13" fill="none" stroke="#6ee7f9" stroke-opacity="0.5"/>
+  <rect x="490" y="200" width="80" height="26" rx="13" fill="#00c8d7" opacity="0.2" stroke="#00c8d7" stroke-opacity="0.5"/>
+
+  <rect x="370" y="260" width="320" height="130" rx="16" fill="#252932" stroke="#00c8d7" stroke-opacity="0.25"/>
+  <g stroke="#6ee7f9" stroke-opacity="0.5" stroke-width="1.5" fill="none">
+    <rect x="400" y="290" width="60" height="70" rx="6"/>
+    <rect x="475" y="290" width="60" height="70" rx="6"/>
+    <rect x="550" y="290" width="60" height="70" rx="6"/>
+  </g>
+  <g fill="#00c8d7" opacity="0.6">
+    <circle cx="430" cy="315" r="3"/>
+    <circle cx="505" cy="315" r="3"/>
+    <circle cx="580" cy="315" r="3"/>
+  </g>
+
+  <rect x="110" y="420" width="580" height="70" rx="14" fill="#1e222a" stroke="#00c8d7" stroke-opacity="0.2"/>
+  <text x="400" y="462" text-anchor="middle" font-family="monospace" font-size="15" fill="#6ee7f9" letter-spacing="1">NOVACART — MEAN STACK E-COMMERCE</text>
+</svg>

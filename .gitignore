@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw source photo drop (scratch originals + crop previews, not used by the app)
+/photo
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
