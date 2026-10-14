@@ -32,7 +32,7 @@ const siteUrl = "https://nadeenportfolio.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${profile.name} — AI Engineer`,
+    default: `${profile.name} Portfolio`,
     template: `%s — ${profile.name}`,
   },
   description:
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: `${profile.name} — AI Engineer`,
+    title: `${profile.name} Portfolio`,
     description:
       "Portfolio of Nadeen Hany, an AI Engineer and Computer Engineering student at E-JUST. AI Trainee at Samsung Innovation Campus (SIC8), building deep learning, computer vision and data science projects, and the full-stack apps that ship them.",
     siteName: `${profile.name} Portfolio`,
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} — AI Engineer`,
+    title: `${profile.name} Portfolio`,
     description: "Portfolio of Nadeen Hany, AI Engineer: deep learning, computer vision and data science.",
     images: ["/images/nadeen-original.jpg"],
   },
