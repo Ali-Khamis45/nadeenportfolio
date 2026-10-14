@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import Magnetic from "@/components/ui/Magnetic";
 
 const buttonStyles = cva(
-  "relative inline-flex items-center justify-center gap-2 rounded-full font-accent font-medium transition-colors duration-300 focus-visible:outline-none disabled:opacity-50 disabled:pointer-events-none",
+  "relative inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-accent font-medium transition-colors duration-300 focus-visible:outline-none disabled:opacity-50 disabled:pointer-events-none",
   {
     variants: {
       variant: {

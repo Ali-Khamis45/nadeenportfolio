@@ -22,6 +22,7 @@ import {
   SiNumpy,
   SiJupyter,
   SiCplusplus,
+  SiPytorch,
 } from "react-icons/si";
 import { Sparkles, BarChart3 } from "lucide-react";
 import Container from "@/components/ui/Container";
@@ -49,6 +50,8 @@ const iconMap: Record<string, ComponentType<{ className?: string; size?: number 
   NumPy: SiNumpy,
   Jupyter: SiJupyter,
   "C++": SiCplusplus,
+  PyTorch: SiPytorch,
+  XGBoost: BarChart3,
   "Power BI": BarChart3,
 };
 

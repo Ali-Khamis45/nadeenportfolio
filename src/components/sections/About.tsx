@@ -14,8 +14,8 @@ import { profile, certifications } from "@/lib/data";
 const stats = [
   { value: 90, suffix: "%", label: "Top model test accuracy (Chest X-Ray)" },
   { value: 16000, suffix: "+", label: "SIC8 applicants · selected as 1 of 360" },
-  { value: 1900, suffix: "+", label: "Survey responses analysed at SIC" },
-  { value: 7, suffix: "", label: "Certifications & programs" },
+  { value: 82, suffix: "%", label: "Fail recall · at-risk student model" },
+  { value: 100, suffix: "K", label: "Student records modelled at SIC" },
 ];
 
 const focusAreas = [

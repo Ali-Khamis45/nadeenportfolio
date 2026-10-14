@@ -66,7 +66,7 @@ export default function Hero() {
               <FolderGit2 size={16} />
               View Projects
             </Button>
-            <Button href="/cv/nadeen-hany-cv.pdf" variant="secondary" download magnetic>
+            <Button href={profile.cv} variant="secondary" download="Nadeen-Hany-CV.pdf" magnetic>
               <Download size={16} />
               Download CV
             </Button>

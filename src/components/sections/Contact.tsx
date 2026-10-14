@@ -4,7 +4,7 @@ import { useState, type ReactNode } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import { Mail, Send, Check, Copy, MapPin, Sparkles, Rocket } from "lucide-react";
+import { Mail, Send, Check, Copy, MapPin, Sparkles, Rocket, FileDown } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
 import Container from "@/components/ui/Container";
@@ -108,6 +108,22 @@ export default function Contact() {
                 <span>
                   <span className="block font-accent text-sm text-text">LinkedIn</span>
                   <span className="block text-xs text-muted">Nadeen Hany</span>
+                </span>
+              </span>
+            </a>
+
+            <a
+              href={profile.cv}
+              download="Nadeen-Hany-CV.pdf"
+              className="group flex items-center justify-between rounded-2xl border border-border bg-surface/60 px-5 py-4 transition-colors hover:border-accent/30"
+            >
+              <span className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10 text-accent">
+                  <FileDown size={16} />
+                </span>
+                <span>
+                  <span className="block font-accent text-sm text-text">Resume / CV</span>
+                  <span className="block text-xs text-muted">Download PDF</span>
                 </span>
               </span>
             </a>

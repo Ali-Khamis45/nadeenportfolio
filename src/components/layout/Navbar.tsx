@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { motion, useScroll } from "framer-motion";
-import { Menu, X, Command as CommandIcon } from "lucide-react";
+import { Menu, X, Command as CommandIcon, Download } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Logo from "@/components/ui/Logo";
 import ThemeToggle from "@/components/layout/ThemeToggle";
-import { navLinks } from "@/lib/data";
+import { navLinks, profile } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
@@ -58,7 +58,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="rounded-full px-4 py-2 font-accent text-sm text-muted transition-colors hover:text-accent"
+                  className="rounded-full px-3 py-2 font-accent text-sm text-muted transition-colors hover:text-accent xl:px-4"
                 >
                   {link.label}
                 </a>
@@ -73,12 +73,16 @@ export default function Navbar() {
                 const ev = new KeyboardEvent("keydown", { key: "k", metaKey: true });
                 document.dispatchEvent(ev);
               }}
-              className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 font-accent text-xs text-muted transition-colors hover:border-accent/40 hover:text-accent"
+              className="hidden items-center gap-1.5 rounded-full border border-border px-3 py-1.5 font-accent text-xs text-muted transition-colors hover:border-accent/40 hover:text-accent xl:flex"
               aria-label="Open command palette"
             >
               <CommandIcon size={13} />K
             </button>
             <ThemeToggle />
+            <Button href={profile.cv} variant="secondary" size="sm" download="Nadeen-Hany-CV.pdf">
+              <Download size={14} />
+              CV
+            </Button>
             <Button href="#contact" size="sm">
               Contact Me
             </Button>
@@ -118,6 +122,16 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+          <Button
+            href={profile.cv}
+            variant="secondary"
+            className="mt-3 w-full"
+            download="Nadeen-Hany-CV.pdf"
+            onClick={() => setOpen(false)}
+          >
+            <Download size={16} />
+            Download CV
+          </Button>
           <Button href="#contact" className="mt-3 w-full" onClick={() => setOpen(false)}>
             Contact Me
           </Button>

@@ -114,7 +114,7 @@ export default function CommandPalette() {
                     onSelect={() => {
                       const link = document.createElement("a");
                       link.href = "/cv/nadeen-hany-cv.pdf";
-                      link.download = "nadeen-hany-cv.pdf";
+                      link.download = "Nadeen-Hany-CV.pdf";
                       link.click();
                       setOpen(false);
                     }}

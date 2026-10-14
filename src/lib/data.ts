@@ -7,6 +7,7 @@ export const profile = {
   github: "https://github.com/Nadeeen232",
   linkedin: "https://www.linkedin.com/in/nadeen-hany-71a77221b/",
   location: "Alexandria, Egypt",
+  cv: "/cv/nadeen-hany-cv.pdf",
   roles: [
     "AI Engineer",
     "Deep Learning Engineer",
@@ -16,8 +17,8 @@ export const profile = {
     "Full-Stack Developer",
   ],
   about: [
-    "I'm an AI engineer in the making, and a Computer Engineering student at the Egypt-Japan University of Science and Technology (E-JUST). My focus is deep learning and computer vision: training, evaluating and comparing neural networks on real-world data. My latest work is a medical-imaging pipeline that detects pneumonia in chest X-rays. It compares DenseNet121, EfficientNetB0 and a Swin Transformer, uses U-Net lung segmentation for preprocessing, and gets 90.4% test accuracy from the best model.",
-    "I'm currently an AI Trainee in the Samsung Innovation Campus (SIC8) AI Track. I was one of 360 people selected from over 16,000 applicants, an acceptance rate of about 2.2%. There I work across the full data and ML lifecycle: Python, data cleaning, exploratory analysis, machine learning, and LLMs. My first SIC project turned 1,900+ student survey responses into Power BI dashboards that show what really drives student stress. I also hold Huawei's HCIA-AI certification and compete in ICPC-style programming contests (ECPC).",
+    "I'm an AI engineer in the making, and a Computer Engineering student at the Egypt-Japan University of Science and Technology (E-JUST), with a 3.6/4.0 CGPA. My focus is deep learning and computer vision: training, evaluating and comparing neural networks on real-world data. My latest work is a medical-imaging pipeline that detects pneumonia in chest X-rays. It compares DenseNet121, EfficientNetB0 and a Swin Transformer, uses U-Net lung segmentation for preprocessing, and gets 90.4% test accuracy from the best model.",
+    "I'm currently an AI Trainee in the Samsung Innovation Campus (SIC8) AI Track. I was one of 360 people selected from over 16,000 applicants, an acceptance rate of about 2.2%. There I work across the full data and ML lifecycle: Python, statistics, machine learning and deep learning. My SIC capstone flags at-risk students before exams on a 100,000-record dataset. It reaches 0.89 ROC-AUC and catches 82% of failing students. I also trained in data science at Orange Digital Center, hold Huawei's HCIA-AI certification, and compete in ICPC-style programming contests (ECPC).",
     "Before AI, I trained as a full-stack web engineer through DEPI and NTI, working with React, Angular, Node.js, Express and MongoDB. That background matters: I can take a model out of the notebook and ship it as a real, usable product.",
   ],
 };
@@ -58,7 +59,9 @@ export const skillCategories: SkillCategory[] = [
       { name: "Large Language Models (LLMs)", level: 72 },
       { name: "Prompt Engineering", level: 82 },
       { name: "Generative AI", level: 74 },
-      { name: "Scikit-Learn", level: 74 },
+      { name: "PyTorch", level: 66 },
+      { name: "Scikit-learn", level: 82 },
+      { name: "XGBoost", level: 74 },
       { name: "Jupyter / Google Colab", level: 88 },
     ],
   },
@@ -73,9 +76,14 @@ export const skillCategories: SkillCategory[] = [
       { name: "Data Mining", level: 72 },
       { name: "Pandas", level: 82 },
       { name: "NumPy", level: 80 },
-      { name: "Matplotlib / Seaborn", level: 76 },
+      { name: "Matplotlib / Seaborn", level: 80 },
       { name: "Power BI Dashboards", level: 80 },
       { name: "Data Augmentation", level: 76 },
+      { name: "SQL", level: 72 },
+      { name: "Feature Engineering", level: 78 },
+      { name: "Hyperparameter Tuning", level: 74 },
+      { name: "Cross-Validation", level: 76 },
+      { name: "Imbalanced Classification Metrics", level: 76 },
     ],
   },
   {
@@ -173,19 +181,33 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "student-stress",
-    title: "Student Stress Analytics: Samsung Innovation Campus",
-    tagline: "Data Science · SIC8",
-    goal: "Team data-science project that analysed 1,900+ student survey responses to find out what really weighs on students, then presented the story in interactive dashboards.",
+    id: "student-at-risk",
+    title: "At-Risk Student Prediction: Samsung Innovation Campus",
+    tagline: "AI · Machine Learning · SIC Capstone",
+    goal: "Machine learning model that flags students likely to fail before exam season, so schools can step in early. Built on 100,000 student records with academic, behavioural, lifestyle and wellbeing features.",
     contributions: [
-      "Cleaned messy survey data, including long questions, duplicates and outliers",
-      "Ran a full EDA: correlations, feature importance and multicollinearity checks",
-      "Built interactive Power BI dashboards. Found that bullying and career anxiety are among the strongest stress factors, and that 91% of students cope positively",
+      "Compared Logistic Regression, Decision Tree, Random Forest, Gradient Boosting, XGBoost and an RF + XGBoost soft-voting ensemble, using metrics suited to imbalanced data (77% pass / 23% fail)",
+      "Chose tuned Logistic Regression for its 82.2% fail recall and 0.89 ROC-AUC. It catches 3,715 of 4,522 failing students",
+      "Removed leakage columns such as exam score and grade, then used a stratified 80/20 split with median/mode imputation and one-hot encoding (62 features)",
+      "Identified prior GPA and study habits as the strongest predictors, and turned them into recommendations for institutions",
+    ],
+    image: "/images/projects/student-at-risk.svg",
+    tags: ["AI / ML", "Python", "Scikit-learn", "XGBoost", "Ensemble Learning"],
+    githubUrl: "https://github.com/Nadeeen232/student-at-risk-prediction",
+  },
+  {
+    id: "student-stress",
+    title: "Student Stress Level Analysis",
+    tagline: "Data Science · Team Project",
+    goal: "Data analysis that combines physiological signals (heart rate, body temperature) with self-reported stress levels to find patterns that could help detect student stress early.",
+    contributions: [
+      "Cleaned the data: missing values, duplicates and data types",
+      "Compared high- and low-stress groups and ran correlation analysis across heart rate, body temperature and stress level",
+      "Built an interactive Power BI dashboard plus notebook charts (histograms, box plots, correlation heatmap)",
     ],
     image: "/images/projects/student-stress.svg",
-    tags: ["Data Science", "Python", "Pandas", "EDA", "Power BI"],
-    linkUrl: "https://www.linkedin.com/in/nadeen-hany-71a77221b/recent-activity/all/",
-    linkLabel: "Read on LinkedIn",
+    tags: ["Data Science", "Python", "Pandas", "Seaborn", "Power BI"],
+    githubUrl: "https://github.com/Nadeeen232/Student-Stress-Level-Data-Analysis",
   },
   {
     id: "ai-learning-platform",
@@ -255,20 +277,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Nadeeen232/MONAC.",
     liveUrl: "https://nadeeen232.github.io/MONAC./",
   },
-  {
-    id: "react-vite",
-    title: "React + Vite App",
-    tagline: "Front-End",
-    goal: "React single-page app scaffolded with Vite and deployed to Vercel.",
-    contributions: [
-      "Component-driven React UI with fast Vite HMR tooling",
-      "Continuous deployment on Vercel",
-    ],
-    image: "/images/projects/react-vite.svg",
-    tags: ["React", "Vite", "JavaScript"],
-    githubUrl: "https://github.com/Nadeeen232/vitereact2",
-    liveUrl: "https://vitereact2-bay.vercel.app",
-  },
 ];
 
 export const projectTags = [
@@ -297,8 +305,17 @@ export const experience: ExperienceItem[] = [
     org: "Samsung Innovation Campus · Samsung Electronics Egypt × Life Makers Foundation",
     period: "Jul 2026 — Present",
     description:
-      "One of 360 trainees selected from 16,000+ applicants (about 2.2% acceptance). The training covers the full AI lifecycle: Python, data analysis, data mining, machine learning, deep learning and LLMs. First team project: analysed 1,900+ student survey responses with cleaning, EDA and feature importance, then built Power BI dashboards that reveal the main drivers of student stress.",
-    tags: ["Python", "Machine Learning", "Data Analysis", "Power BI", "LLMs"],
+      "One of 360 trainees selected from 16,000+ applicants (about 2.2% acceptance). Covers Python, statistics, machine learning and deep learning. Capstone: an at-risk student prediction model on 100,000 records that reaches 0.89 ROC-AUC and 82% fail recall.",
+    tags: ["Python", "Machine Learning", "Deep Learning", "Scikit-learn", "XGBoost"],
+  },
+  {
+    id: "odc",
+    role: "Data Science Trainee",
+    org: "Orange Digital Center (D-Hub)",
+    period: "2026",
+    description:
+      "Cleaned, explored and visualised datasets with Python, Pandas, NumPy and Matplotlib. Trained classification and prediction models with Scikit-learn and reported the results through dashboards.",
+    tags: ["Python", "Pandas", "Scikit-learn", "Dashboards"],
   },
   {
     id: "ecpc",
@@ -340,9 +357,9 @@ export const experience: ExperienceItem[] = [
     id: "ejust",
     role: "Computer Engineering Student",
     org: "Egypt-Japan University of Science and Technology (E-JUST)",
-    period: "Present",
+    period: "Expected 2028",
     description:
-      "Studying computer engineering with a focus on AI, algorithms and software systems, and applying coursework to deep learning and full-stack projects.",
+      "B.Sc. in Computer Engineering, expected 2028, CGPA 3.6/4.0. Relevant coursework: Machine Learning, Deep Learning, Computer Vision, NLP, LLMs, and Data Structures & Algorithms.",
     tags: ["Computer Engineering", "AI", "Algorithms"],
   },
 ];
@@ -353,6 +370,7 @@ export const certifications = [
   { year: "2025", title: "Core Programming Bootcamp", org: "GDG On Campus" },
   { year: "2026", title: "Python Programming Basics", org: "MaharaTech · ITI" },
   { year: "2026", title: "MEAN-Stack Web Development", org: "NTI" },
+  { year: "2026", title: "Data Science Training", org: "Orange Digital Center" },
   { year: "2026", title: "ECPC Contestant", org: "ICPC" },
   { year: "2026", title: "AI Track (SIC8)", org: "Samsung Innovation Campus" },
 ];
@@ -383,7 +401,7 @@ export const services: Service[] = [
     id: "data-analytics",
     title: "Data Analysis & BI Dashboards",
     description:
-      "Turning messy data into decisions: cleaning, EDA, correlation and feature-importance analysis, and interactive Power BI dashboards.",
+      "Turning messy data into decisions: cleaning, EDA, correlation and feature-importance analysis, predictive models with Scikit-learn and XGBoost, and interactive Power BI dashboards.",
     icon: "BarChart3",
   },
   {
@@ -413,7 +431,9 @@ export const techStack = [
   "Python",
   "TensorFlow",
   "Keras",
+  "PyTorch",
   "Scikit-Learn",
+  "XGBoost",
   "Pandas",
   "NumPy",
   "Power BI",
