@@ -17,9 +17,9 @@ export const profile = {
     "Full-Stack Developer",
   ],
   about: [
-    "I'm an AI engineer in the making, and a Computer Engineering student at the Egypt-Japan University of Science and Technology (E-JUST), with a 3.6/4.0 CGPA. My focus is deep learning and computer vision: training, evaluating and comparing neural networks on real-world data. My latest work is a medical-imaging pipeline that detects pneumonia in chest X-rays. It compares DenseNet121, EfficientNetB0 and a Swin Transformer, uses U-Net lung segmentation for preprocessing, and gets 90.4% test accuracy from the best model.",
-    "I'm currently an AI Trainee in the Samsung Innovation Campus (SIC8) AI Track. I was one of 360 people selected from over 16,000 applicants, an acceptance rate of about 2.2%. There I work across the full data and ML lifecycle: Python, statistics, machine learning and deep learning. My SIC capstone flags at-risk students before exams on a 100,000-record dataset. It reaches 0.89 ROC-AUC and catches 82% of failing students. I also trained in data science at Orange Digital Center, hold Huawei's HCIA-AI certification, and compete in ICPC-style programming contests (ECPC).",
-    "Before AI, I trained as a full-stack web engineer through DEPI and NTI, working with React, Angular, Node.js, Express and MongoDB. That background matters: I can take a model out of the notebook and ship it as a real, usable product.",
+    "I'm a Computer Engineering student at E-JUST (CGPA 3.6) and I work mostly on deep learning and computer vision. My main project detects pneumonia in chest X-rays. I trained DenseNet121, EfficientNetB0 and a Swin Transformer, added U-Net lung segmentation, and got the best model to 90.4% test accuracy.",
+    "Right now I'm an AI Trainee at Samsung Innovation Campus, one of 360 people picked from 16,000+ applicants. My capstone there predicts which students are likely to fail before exams, with 0.89 ROC-AUC on 100,000 records.",
+    "I started out in web development with React, Angular and Node.js. So when a model works, I can build the app around it too.",
   ],
 };
 
