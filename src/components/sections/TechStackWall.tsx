@@ -16,8 +16,14 @@ import {
   SiDocker,
   SiVercel,
   SiFirebase,
+  SiKeras,
+  SiScikitlearn,
+  SiPandas,
+  SiNumpy,
+  SiJupyter,
+  SiCplusplus,
 } from "react-icons/si";
-import { Sparkles } from "lucide-react";
+import { Sparkles, BarChart3 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { techStack } from "@/lib/data";
 
@@ -37,6 +43,13 @@ const iconMap: Record<string, ComponentType<{ className?: string; size?: number 
   Docker: SiDocker,
   Vercel: SiVercel,
   Firebase: SiFirebase,
+  Keras: SiKeras,
+  "Scikit-Learn": SiScikitlearn,
+  Pandas: SiPandas,
+  NumPy: SiNumpy,
+  Jupyter: SiJupyter,
+  "C++": SiCplusplus,
+  "Power BI": BarChart3,
 };
 
 function Row({ reverse = false }: { reverse?: boolean }) {

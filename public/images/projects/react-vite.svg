@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgR" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e222a"/>
+      <stop offset="100%" stop-color="#252932"/>
+    </linearGradient>
+    <linearGradient id="accR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00c8d7"/>
+      <stop offset="100%" stop-color="#6ee7f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgR)"/>
+  <g transform="translate(270 300)" fill="none" stroke="url(#accR)" stroke-width="6">
+    <ellipse rx="150" ry="58"/>
+    <ellipse rx="150" ry="58" transform="rotate(60)"/>
+    <ellipse rx="150" ry="58" transform="rotate(120)"/>
+  </g>
+  <circle cx="270" cy="300" r="22" fill="#6ee7f9"/>
+  <path d="M520 150 L640 150 L585 300 L630 300 L520 470 L555 330 L505 330 Z" fill="url(#accR)" opacity="0.85"/>
+  <path d="M520 150 L640 150 L585 300 L630 300 L520 470 L555 330 L505 330 Z" fill="none" stroke="#6ee7f9" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="140" y="480" width="520" height="40" rx="20" fill="#252932" stroke="#00c8d7" stroke-opacity="0.3"/>
+  <text x="400" y="506" font-family="ui-monospace, Menlo, monospace" fill="#f5f5f5" font-size="14" text-anchor="middle" opacity="0.7">vitereact2-bay.vercel.app</text>
+</svg>

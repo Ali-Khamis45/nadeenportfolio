@@ -27,24 +27,26 @@ const inter = Inter({
   weight: ["400", "500"],
 });
 
-const siteUrl = "https://nadeenhany.dev";
+const siteUrl = "https://nadeenportfolio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${profile.name} — Front-End & UI/UX Developer`,
+    default: `${profile.name} — AI Engineer`,
     template: `%s — ${profile.name}`,
   },
   description:
-    "Portfolio of Nadeen Hany, a frontend & full-stack web developer and UI/UX specialist building interactive, human-centered web experiences.",
+    "Portfolio of Nadeen Hany, an AI Engineer and Computer Engineering student at E-JUST. AI Trainee at Samsung Innovation Campus (SIC8), building deep learning, computer vision and data science projects, and the full-stack apps that ship them.",
   keywords: [
     "Nadeen Hany",
-    "Frontend Developer",
+    "AI Engineer",
+    "Machine Learning",
+    "Deep Learning",
+    "Computer Vision",
+    "Data Science",
+    "Samsung Innovation Campus",
+    "SIC8",
     "Full-Stack Developer",
-    "React Developer",
-    "Angular Developer",
-    "UI/UX Designer",
-    "Next.js",
     "Portfolio",
     "E-JUST",
   ],
@@ -53,16 +55,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: `${profile.name} — Front-End & UI/UX Developer`,
+    title: `${profile.name} — AI Engineer`,
     description:
-      "Portfolio of Nadeen Hany, a frontend & full-stack web developer and UI/UX specialist building interactive, human-centered web experiences.",
+      "Portfolio of Nadeen Hany, an AI Engineer and Computer Engineering student at E-JUST. AI Trainee at Samsung Innovation Campus (SIC8), building deep learning, computer vision and data science projects, and the full-stack apps that ship them.",
     siteName: `${profile.name} Portfolio`,
     images: [{ url: "/images/nadeen-original.jpg", width: 960, height: 1280, alt: profile.name }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} — Front-End & UI/UX Developer`,
-    description: "Portfolio of Nadeen Hany, a frontend & full-stack web developer and UI/UX specialist.",
+    title: `${profile.name} — AI Engineer`,
+    description: "Portfolio of Nadeen Hany, AI Engineer: deep learning, computer vision and data science.",
     images: ["/images/nadeen-original.jpg"],
   },
   icons: {

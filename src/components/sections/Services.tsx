@@ -1,10 +1,12 @@
 "use client";
 
 import {
-  PenTool,
-  ShoppingCart,
+  Brain,
+  ScanEye,
+  BarChart3,
+  Bot,
   Layers,
-  ShieldCheck,
+  PenTool,
   Sparkles,
   type LucideIcon,
 } from "lucide-react";
@@ -15,10 +17,12 @@ import FadeIn from "@/components/ui/FadeIn";
 import { services } from "@/lib/data";
 
 const iconMap: Record<string, LucideIcon> = {
-  PenTool,
-  ShoppingCart,
+  Brain,
+  ScanEye,
+  BarChart3,
+  Bot,
   Layers,
-  ShieldCheck,
+  PenTool,
 };
 
 export default function Services() {
@@ -28,10 +32,11 @@ export default function Services() {
         <SectionHeading
           index="05"
           kicker="Services"
-          title="How I can help build your next product."
+          title="From raw data to deployed AI products."
+          description="AI and machine learning first, backed by the full-stack skills to put models in front of real users."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => {
             const Icon = iconMap[service.icon] ?? Sparkles;
             return (

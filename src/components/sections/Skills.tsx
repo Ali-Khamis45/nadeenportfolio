@@ -23,8 +23,8 @@ export default function Skills() {
           <SectionHeading
             index="02"
             kicker="Skills"
-            title="A toolkit built across front-end, design, and AI."
-            description="From pixel-considered interfaces to model-backed features — here's what I reach for, grouped by discipline."
+            title="An AI-first toolkit, backed by full-stack engineering."
+            description="Deep learning, computer vision and data science first, plus the web stack that puts models in front of users. Grouped by discipline."
           />
         </div>
 

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, FolderKanban, Sparkles } from "lucide-react";
+import { CheckCircle2, FolderKanban, Sparkles, ExternalLink } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -30,7 +30,7 @@ export default function Projects() {
             index="03"
             kicker="Featured Work"
             title="A few projects worth a closer look."
-            description="Real builds — from full-stack e-commerce to AI-powered tools and interactive dashboards."
+            description="Real builds from GitHub: deep learning for medical imaging, data science at Samsung Innovation Campus, and the full-stack apps that ship them."
           />
 
           <div className="flex flex-wrap gap-2">
@@ -85,7 +85,7 @@ function FeaturedProjectCard({ project }: { project: Project }) {
           />
           <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-accent/40 bg-bg/70 px-3 py-1.5 font-accent text-[11px] uppercase tracking-wider text-accent backdrop-blur-sm">
             <Sparkles size={12} />
-            Latest Project
+            Featured AI Project
           </span>
         </div>
 
@@ -109,14 +109,16 @@ function FeaturedProjectCard({ project }: { project: Project }) {
           </div>
 
           <div className="mt-7 flex items-center gap-4 border-t border-border pt-5">
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-accent/40 px-5 py-2.5 font-accent text-sm text-accent transition-colors hover:bg-accent/10"
-            >
-              <SiGithub size={15} /> View Repository
-            </a>
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-accent/40 px-5 py-2.5 font-accent text-sm text-accent transition-colors hover:bg-accent/10"
+              >
+                <SiGithub size={15} /> View Repository
+              </a>
+            )}
           </div>
         </div>
       </Card>
@@ -161,7 +163,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               ))}
             </ul>
 
-            <div className="mt-4 flex flex-wrap gap-1.5">
+            <div className="mb-6 mt-4 flex flex-wrap gap-1.5">
               {project.tags.map((tag) => (
                 <Badge key={tag} className="text-[10px]">
                   {tag}
@@ -169,19 +171,36 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               ))}
             </div>
 
-            <div className="mt-6 flex items-center gap-4 border-t border-border pt-4">
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 font-accent text-xs text-accent transition-colors hover:opacity-80"
-              >
-                <SiGithub size={13} /> View Repository
-              </a>
-              {!project.liveUrl && (
-                <span className="font-accent text-[11px] text-muted/60">
-                  Live demo not yet deployed
-                </span>
+            <div className="mt-auto flex flex-wrap items-center gap-4 border-t border-border pt-4">
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 font-accent text-xs text-accent transition-colors hover:opacity-80"
+                >
+                  <SiGithub size={13} /> View Repository
+                </a>
+              )}
+              {project.linkUrl && (
+                <a
+                  href={project.linkUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 font-accent text-xs text-accent transition-colors hover:opacity-80"
+                >
+                  <ExternalLink size={13} /> {project.linkLabel ?? "Learn more"}
+                </a>
+              )}
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 font-accent text-xs text-accent transition-colors hover:opacity-80"
+                >
+                  <ExternalLink size={13} /> Live Demo
+                </a>
               )}
             </div>
           </div>

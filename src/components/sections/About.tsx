@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { GraduationCap, Sparkles, Lightbulb, Coffee } from "lucide-react";
+import { GraduationCap, Sparkles, Brain, Cpu, Award } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
@@ -9,18 +9,22 @@ import Badge from "@/components/ui/Badge";
 import FadeIn from "@/components/ui/FadeIn";
 import Doodle from "@/components/ui/Doodle";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
-import { profile } from "@/lib/data";
+import { profile, certifications } from "@/lib/data";
 
 const stats = [
-  { value: 6, suffix: "+", label: "Projects Built" },
-  { value: 40, suffix: "+", label: "Technologies Used" },
-  { value: 3, suffix: "+", label: "Years Learning & Building" },
+  { value: 90, suffix: "%", label: "Top model test accuracy (Chest X-Ray)" },
+  { value: 16000, suffix: "+", label: "SIC8 applicants · selected as 1 of 360" },
+  { value: 1900, suffix: "+", label: "Survey responses analysed at SIC" },
+  { value: 7, suffix: "", label: "Certifications & programs" },
 ];
 
 const focusAreas = [
-  "Human-Centered Design",
-  "Front-End Architecture",
-  "Artificial Intelligence",
+  "Deep Learning",
+  "Computer Vision",
+  "Medical Imaging",
+  "Data Science & Analytics",
+  "LLMs & Generative AI",
+  "Full-Stack Engineering",
 ];
 
 export default function About() {
@@ -31,13 +35,15 @@ export default function About() {
           <SectionHeading
             index="01"
             kicker="About Me"
-            title="Building interfaces people actually enjoy using."
+            title="Engineering intelligent systems, from model to product."
           />
 
-          <FadeIn delay={0.15}>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
-              {profile.about}
-            </p>
+          <FadeIn delay={0.15} className="mt-6 flex max-w-xl flex-col gap-4">
+            {profile.about.map((paragraph) => (
+              <p key={paragraph.slice(0, 32)} className="text-base leading-relaxed text-muted">
+                {paragraph}
+              </p>
+            ))}
           </FadeIn>
 
           <FadeIn delay={0.2} className="mt-8 flex flex-wrap gap-2">
@@ -46,7 +52,7 @@ export default function About() {
             ))}
           </FadeIn>
 
-          <FadeIn delay={0.25} className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-8">
+          <FadeIn delay={0.25} className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <div className="font-display text-3xl font-semibold text-text sm:text-4xl">
@@ -60,8 +66,8 @@ export default function About() {
 
         <div className="relative mx-auto w-full max-w-sm">
           <Doodle icon={Sparkles} className="-left-6 -top-6 hidden sm:block" size={22} delay={0.3} />
-          <Doodle icon={Lightbulb} className="-right-4 top-10 hidden sm:block" size={24} delay={1} />
-          <Doodle icon={Coffee} className="-left-8 bottom-16 hidden sm:block" size={22} delay={0.7} />
+          <Doodle icon={Brain} className="-right-4 top-10 hidden sm:block" size={24} delay={1} />
+          <Doodle icon={Cpu} className="-left-8 bottom-16 hidden sm:block" size={22} delay={0.7} />
 
           <FadeIn y={30}>
             <Card className="overflow-hidden p-3" glow>
@@ -90,8 +96,28 @@ export default function About() {
                 Currently
               </p>
               <p className="mt-1.5 text-sm text-text/90">
-                AI Trainee @ Samsung Innovation Campus
+                AI Trainee @ Samsung Innovation Campus (SIC8 · AI Track)
               </p>
+            </Card>
+          </FadeIn>
+
+          <FadeIn delay={0.25} y={20} className="mt-4">
+            <Card className="p-4" glow={false}>
+              <p className="flex items-center gap-1.5 font-accent text-xs uppercase tracking-wider text-accent">
+                <Award size={13} />
+                AI Journey & Certifications
+              </p>
+              <ol className="mt-3 flex flex-col gap-2.5 border-l border-border pl-4">
+                {certifications.map((cert) => (
+                  <li key={cert.title} className="relative">
+                    <span className="absolute -left-[21px] top-1.5 h-2 w-2 rounded-full bg-accent" />
+                    <span className="font-accent text-[11px] text-muted">{cert.year}</span>
+                    <p className="text-sm leading-snug text-text/90">
+                      {cert.title} <span className="text-muted">· {cert.org}</span>
+                    </p>
+                  </li>
+                ))}
+              </ol>
             </Card>
           </FadeIn>
         </div>

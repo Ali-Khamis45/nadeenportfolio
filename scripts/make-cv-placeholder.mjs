@@ -2,12 +2,12 @@ import { writeFileSync } from "node:fs";
 
 const lines = [
   "Nadeen Hany",
-  "Front-End Developer | React.js Developer | UI/UX Specialist",
+  "AI Engineer | Machine Learning & Deep Learning | Full-Stack Developer",
   "",
-  "Computer Engineering Student @ E-JUST  |  AI Trainee @ Samsung Innovation Campus",
+  "Computer Engineering Student @ E-JUST  |  AI Trainee @ Samsung Innovation Campus (SIC8)",
   "Email: nadeenhany99@gmail.com",
   "GitHub: github.com/Nadeeen232",
-  "Location: Egypt",
+  "Location: Alexandria, Egypt",
   "",
   "This is a placeholder CV. Replace public/cv/nadeen-hany-cv.pdf",
   "with your real, up-to-date resume PDF.",

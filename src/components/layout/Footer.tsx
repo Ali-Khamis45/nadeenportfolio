@@ -19,8 +19,8 @@ export default function Footer() {
               <Logo size={34} />
             </a>
             <p className="mt-3 max-w-sm text-sm text-muted">
-              Frontend &amp; full-stack developer crafting interactive, human-centered web
-              experiences from Egypt.
+              AI engineer building deep learning, computer vision and data-driven products,
+              from Alexandria, Egypt.
             </p>
           </div>
 

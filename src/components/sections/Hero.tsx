@@ -57,8 +57,8 @@ export default function Hero() {
           </div>
 
           <p className="mt-6 max-w-lg text-base leading-relaxed text-muted">
-            {profile.subtitle}. I build beautiful, responsive interfaces and love bringing
-            AI and modern web tooling into the products I ship.
+            {profile.subtitle}. I train and evaluate deep learning models for computer
+            vision and data science, then ship them as polished full-stack products.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
